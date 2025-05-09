@@ -44,8 +44,9 @@ const Header = () => {
               <Image
                 src="/images/logo.png" // Đường dẫn đến logo
                 alt="CreLaTech Logo"
-                width={120 * 0.5} // Chiều rộng logo
-                height={40 * 0.5} // Chiều cao logo
+                width={60} // Chiều rộng logo
+                height={20} // Chiều cao logo
+                style={{ width: "auto", height: "auto" }} // Đảm bảo tỷ lệ hình ảnh
                 className="object-contain" // Đảm bảo logo hiển thị đúng tỷ lệ
               />
             </div>

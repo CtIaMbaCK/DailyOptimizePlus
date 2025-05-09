@@ -95,6 +95,8 @@ const Features = () => {
               src="/images/DOPHome.png" // Đường dẫn đến hình ảnh trong thư mục public
               alt="DO⁺ App Mockup"
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Thêm sizes để tối ưu hóa
+              priority
               style={{ objectFit: 'contain' }}
               className="rounded-3xl"
             />

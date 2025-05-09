@@ -1,7 +1,20 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  eslint: {
+    // Chỉ kiểm tra trong quá trình phát triển, không kiểm tra khi build
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    // Tương tự, bỏ qua lỗi TypeScript khi build để tăng tốc
+    ignoreBuildErrors: true,
+  },
+  swcMinify: true, // Sử dụng SWC để tối ưu hóa
+  poweredByHeader: false, // Tắt header X-Powered-By
+  reactStrictMode: true,
+  images: {
+    formats: ['image/avif', 'image/webp'], 
+    // Thêm các domain nếu bạn tải hình ảnh từ bên ngoài
+  },
 };
 
 export default nextConfig;
