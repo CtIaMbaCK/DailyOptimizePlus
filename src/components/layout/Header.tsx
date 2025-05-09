@@ -5,10 +5,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,14 +38,20 @@ const Header = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <div className="relative h-10 w-10">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-violet-500 rounded-lg"></div>
-              <div className="absolute inset-0.5 bg-white dark:bg-gray-900 rounded-lg flex items-center justify-center font-bold text-xl text-purple-600">
-                C
-              </div>
+          <Link href="/" className="flex items-center space-x-3">
+            {/* Logo Container */}
+            <div className="relative h-12 w-auto flex items-center justify-center">
+              <Image
+                src="/images/logo.png" // Đường dẫn đến logo
+                alt="CreLaTech Logo"
+                width={120 * 0.5} // Chiều rộng logo
+                height={40 * 0.5} // Chiều cao logo
+                className="object-contain" // Đảm bảo logo hiển thị đúng tỷ lệ
+              />
             </div>
-            <span className="ml-2 text-xl font-bold bg-gradient-to-r from-purple-600 to-violet-400 inline-block text-transparent bg-clip-text">
+
+            {/* Logo Text */}
+            <span className="text-2xl font-extrabold bg-gradient-to-r from-purple-600 to-violet-400 text-transparent bg-clip-text tracking-wide">
               CreLaTech
             </span>
           </Link>
@@ -54,10 +62,17 @@ const Header = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className="relative text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400 font-medium transition-colors group"
+                className={`relative transition-colors group font-medium ${pathname === item.href
+                  ? 'text-purple-600 dark:text-purple-400 font-bold' // Màu tím và in đậm nếu là trang hiện tại
+                  : 'text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400'
+                  }`}
               >
                 {item.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 group-hover:w-full transition-all duration-300"></span>
+                {pathname !== item.href && ( // Chỉ hiển thị gạch chân nếu không phải trang hiện tại
+                  <span
+                    className="absolute bottom-0 left-0 h-0.5 bg-purple-600 w-0 group-hover:w-full transition-all duration-300"
+                  ></span>
+                )}
               </Link>
             ))}
           </nav>

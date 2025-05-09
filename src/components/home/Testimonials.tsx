@@ -59,7 +59,7 @@ const Testimonials = () => {
             viewport={{ once: true }}
             className="inline-block py-1 px-3 rounded-full text-sm font-medium bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-300 mb-4"
           >
-            Đánh giá từ người dùng
+            Sự mong đợi của mọi người
           </motion.span>
           <motion.h2 
             initial={{ opacity: 0, y: 10 }}
@@ -68,7 +68,7 @@ const Testimonials = () => {
             viewport={{ once: true }}
             className="heading-lg mb-6"
           >
-            Người dùng nói gì về <span className="text-purple-600 dark:text-purple-400">DO⁺</span>
+            Mọi người nói gì về <span className="text-purple-600 dark:text-purple-400">DO⁺</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 10 }}

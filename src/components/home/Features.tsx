@@ -2,20 +2,20 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { 
-  ClockIcon, 
-  ChatBubbleBottomCenterTextIcon, 
+import {
+  ClockIcon,
+  ChatBubbleBottomCenterTextIcon,
   ChartBarIcon,
-  DocumentTextIcon, 
-  BoltIcon, 
-  SparklesIcon 
+  DocumentTextIcon,
+  BoltIcon,
+  SparklesIcon
 } from '@heroicons/react/24/outline';
 
 const Features = () => {
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: {
         duration: 0.6
@@ -55,16 +55,16 @@ const Features = () => {
       description: "Thiết kế hiện đại, tùy biến cao với nhiều theme màu và chế độ tối, phù hợp với phong cách cá nhân của Gen Z."
     }
   ];
-  
+
   return (
     <section className="py-16 md:py-24 relative overflow-hidden">
       {/* Purple gradient background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden -z-10">
         <div className="absolute bottom-0 left-0 w-[60%] h-[60%] rounded-full bg-purple-100/50 dark:bg-purple-900/10 blur-[100px] opacity-60"></div>
       </div>
-      
+
       <div className="container-custom">
-        <motion.div 
+        <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -82,83 +82,29 @@ const Features = () => {
           </p>
         </motion.div>
 
-        {/* App Feature Mockup */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24">
-          {/* Left: App mockup visual */}
-          <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-            className="lg:col-span-5 relative"
-          >
-            <div className="relative mx-auto max-w-sm">
-              {/* Phone frame */}
-              <div className="relative z-10 bg-white dark:bg-gray-900 rounded-3xl shadow-xl overflow-hidden border-[10px] border-gray-100 dark:border-gray-800">
-                {/* App screen content */}
-                <div className="aspect-[9/19] w-full bg-gradient-to-br from-purple-600 to-violet-500 relative p-4">
-                  {/* App header */}
-                  <div className="bg-white/10 rounded-lg p-3 mb-4 flex justify-between items-center">
-                    <div className="flex items-center">
-                      <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
-                        <span className="text-xs font-bold text-white">D+</span>
-                      </div>
-                      <span className="ml-2 text-white text-sm font-medium">DO⁺</span>
-                    </div>
-                    <div className="flex space-x-2">
-                      <div className="w-4 h-4 rounded-full bg-white/20"></div>
-                      <div className="w-4 h-4 rounded-full bg-white/20"></div>
-                    </div>
-                  </div>
-                  
-                  {/* App content */}
-                  <div className="bg-white/10 rounded-lg p-3 mb-4">
-                    <div className="h-1.5 w-1/2 bg-white/30 rounded-full mb-3"></div>
-                    <div className="h-1 w-3/4 bg-white/20 rounded-full mb-4"></div>
-                    
-                    <div className="grid grid-cols-2 gap-2 mb-3">
-                      <div className="aspect-square rounded-lg bg-white/20 p-2 flex flex-col justify-between">
-                        <div className="w-5 h-5 rounded-md bg-white/30"></div>
-                        <div className="h-1 w-2/3 bg-white/30 rounded-full"></div>
-                      </div>
-                      <div className="aspect-square rounded-lg bg-white/20 p-2 flex flex-col justify-between">
-                        <div className="w-5 h-5 rounded-md bg-white/30"></div>
-                        <div className="h-1 w-2/3 bg-white/30 rounded-full"></div>
-                      </div>
-                    </div>
-                    
-                    <div className="bg-white/30 h-20 rounded-lg w-full mb-3 p-2">
-                      <div className="h-1 w-1/2 bg-white/40 rounded-full mb-2"></div>
-                      <div className="h-1 w-3/4 bg-white/30 rounded-full mb-2"></div>
-                      <div className="h-1 w-2/3 bg-white/30 rounded-full"></div>
-                      <div className="mt-2 flex justify-end">
-                        <div className="h-3 w-8 rounded-md bg-white/40"></div>
-                      </div>
-                    </div>
-                    
-                    <div className="h-1 w-3/4 bg-white/20 rounded-full"></div>
-                  </div>
-                  
-                  {/* App navigation */}
-                  <div className="absolute bottom-4 inset-x-4 bg-white/10 rounded-xl p-2 flex justify-around">
-                    <div className="w-8 h-8 rounded-full bg-white/30 flex items-center justify-center"></div>
-                    <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center"></div>
-                    <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center"></div>
-                    <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center"></div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Decorative elements */}
-              <div className="absolute -bottom-10 -right-10 -z-10 w-36 h-36 bg-gradient-to-tl from-violet-400 to-pink-300 dark:from-violet-800/30 dark:to-pink-800/30 rounded-full blur-xl opacity-70"></div>
-              <div className="absolute top-1/2 -translate-y-1/2 -left-16 -z-10 w-32 h-32 bg-gradient-to-br from-purple-300 to-indigo-300 dark:from-purple-800/30 dark:to-indigo-800/30 rounded-full blur-xl opacity-70"></div>
-            </div>
-          </motion.div>
-          
+        {/* App img */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24">          <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="lg:col-span-5 relative"
+        >
+          <div className="aspect-[9/16] w-full h-[800px] relative">
+            <Image
+              src="/images/DOPHome.png" // Đường dẫn đến hình ảnh trong thư mục public
+              alt="DO⁺ App Mockup"
+              fill
+              style={{ objectFit: 'contain' }}
+              className="rounded-3xl"
+            />
+          </div>
+        </motion.div>
+
           {/* Right: Features grid */}
           <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial="hidden"
                 whileInView="visible"
@@ -178,9 +124,9 @@ const Features = () => {
             ))}
           </div>
         </div>
-        
+
         {/* CTA */}
-        <motion.div 
+        <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
