@@ -24,6 +24,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "CreLaTech - Khát Vọng Tương Lai, Công Nghệ Dẫn Lối",
   description: "CreLaTech - Ứng dụng DO⁺ giúp quản lý thời gian và công việc hiệu quả",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
