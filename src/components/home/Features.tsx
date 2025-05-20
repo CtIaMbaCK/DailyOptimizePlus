@@ -57,10 +57,10 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 relative overflow-hidden">
+    <section className="py-16 md:py-20 bg-[#FF80A9]/20 relative overflow-hidden">
       {/* Purple gradient background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden -z-10">
-        <div className="absolute bottom-0 left-0 w-[60%] h-[60%] rounded-full bg-purple-100/50 dark:bg-purple-900/10 blur-[100px] opacity-60"></div>
+        <div className="absolute bottom-0 left-0 w-[60%] h-[60%] rounded-full bg-purple-100/50 blur-[100px] opacity-60"></div>
       </div>
 
       <div className="container-custom">
@@ -69,15 +69,18 @@ const Features = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeIn}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-center max-w-4xl mx-auto mb-16"
         >
-          <span className="inline-block py-1 px-3 rounded-full text-sm font-medium bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-300 mb-4">
+          <span className="inline-block py-1 px-3 rounded-full text-bold font-medium bg-[#6263FF]/20 text-[#6263FF]/100 mb-4">
             Tính năng nổi bật
           </span>
-          <h2 className="heading-lg mb-6">
-            Khám phá các tính năng <span className="text-purple-600 dark:text-purple-400">thông minh</span> của DO⁺
+          <h2 className="heading-lg mb-4 text-[#0600AB] uppercase">
+            Khám phá các tính năng thông minh
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300">
+          <h2 className="heading-xl mb-4 text-[#FF80A9] uppercase">
+            DailyOptimize+
+          </h2>
+          <p className="text-lg text-[#0600AB]">
             Ứng dụng DO⁺ được thiết kế để đáp ứng nhu cầu của thế hệ GenZ năng động, kết hợp AI tiên tiến và giao diện trực quan.
           </p>
         </motion.div>
@@ -97,7 +100,10 @@ const Features = () => {
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Thêm sizes để tối ưu hóa
               priority
-              style={{ objectFit: 'contain' }}
+              style={{
+                objectFit: 'contain',
+                filter: 'drop-shadow(-20px 25px 25px rgba(54, 0, 49, 0.53))' // Thêm drop-shadow
+              }}
               className="rounded-3xl"
             />
           </div>
@@ -113,13 +119,13 @@ const Features = () => {
                 viewport={{ once: true }}
                 variants={fadeIn}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 hover:border-purple-200 dark:hover:border-purple-800 transition-all"
+                className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:border-purple-200 transition-all"
               >
-                <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center text-purple-600 dark:text-purple-300 mb-4">
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 mb-4">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300">
+                <h3 className="text-xl text-[#0600AB] font-semibold mb-2">{feature.title}</h3>
+                <p className="text-[#0600AB]/90">
                   {feature.description}
                 </p>
               </motion.div>
@@ -133,7 +139,7 @@ const Features = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeIn}
-          className="bg-gradient-to-r from-purple-500 to-violet-600 rounded-2xl overflow-hidden relative"
+          className="bg-gradient-to-b from-[#FF80A9]/50 to-[#977DFF] rounded-2xl overflow-hidden relative"
         >
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 left-0 w-40 h-40 bg-white rounded-full blur-3xl"></div>

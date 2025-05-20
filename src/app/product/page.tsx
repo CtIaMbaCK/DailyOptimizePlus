@@ -5,12 +5,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Tab } from '@headlessui/react';
-import { 
-  BoltIcon, 
-  ChartBarIcon, 
-  ClockIcon, 
+import {
+  BoltIcon,
+  ChartBarIcon,
+  ClockIcon,
   ChatBubbleBottomCenterTextIcon,
-  DevicePhoneMobileIcon, 
+  DevicePhoneMobileIcon,
   QuestionMarkCircleIcon,
   CheckCircleIcon,
   ArrowDownTrayIcon
@@ -19,13 +19,13 @@ import { StarIcon } from '@heroicons/react/24/solid';
 
 export default function Product() {
   const [selectedTab, setSelectedTab] = useState(0);
-  
+
   const features = [
     {
       title: 'Quản lý thời gian thông minh',
       description: 'DO⁺ sử dụng AI để phân tích thói quen làm việc của bạn và đề xuất lịch trình tối ưu, giúp bạn hoàn thành công việc hiệu quả hơn.',
       icon: <ClockIcon className="w-6 h-6" />,
-      image: '/features/time-management.png',
+      image: '/images/lenkehoach.png',
       benefits: [
         'Tự động sắp xếp công việc theo độ ưu tiên',
         'Nhắc nhở thông minh dựa trên thói quen của bạn',
@@ -37,7 +37,7 @@ export default function Product() {
       title: 'Trợ lý ảo AI',
       description: 'Trợ lý DO⁺ không chỉ nhắc nhở bạn về công việc mà còn đưa ra các gợi ý để cải thiện năng suất làm việc dựa trên dữ liệu cá nhân.',
       icon: <ChatBubbleBottomCenterTextIcon className="w-6 h-6" />,
-      image: '/features/ai-assistant.png',
+      image: '/images/ai.png',
       benefits: [
         'Trả lời tự động các câu hỏi về lịch trình',
         'Tự động tóm tắt các cuộc họp và ghi chú',
@@ -46,10 +46,10 @@ export default function Product() {
       ]
     },
     {
-      title: 'Báo cáo phân tích',
-      description: 'Hiểu rõ cách bạn sử dụng thời gian với các báo cáo phân tích chi tiết, giúp bạn nhận ra điểm mạnh và cải thiện những điểm yếu.',
+      title: 'Gợi ý chi tiêu',
+      description: 'Hiểu rõ cách bạn sử dụng thời gian và cách chi tiêu hợp lý, giúp bạn nhận ra điểm mạnh và cải thiện những điểm yếu.',
       icon: <ChartBarIcon className="w-6 h-6" />,
-      image: '/features/analytics.png',
+      image: '/images/chitieu.png',
       benefits: [
         'Biểu đồ thời gian làm việc theo ngày/tuần/tháng',
         'So sánh năng suất giữa các khoảng thời gian',
@@ -61,7 +61,7 @@ export default function Product() {
       title: 'Tích hợp đa nền tảng',
       description: 'DO⁺ kết nối liền mạch với các ứng dụng phổ biến như Google Calendar, Gmail, Slack, Notion và nhiều ứng dụng khác.',
       icon: <BoltIcon className="w-6 h-6" />,
-      image: '/features/integrations.png',
+      image: '/images/app.png',
       benefits: [
         'Đồng bộ hóa lịch từ nhiều nguồn khác nhau',
         'Nhập công việc từ email và tin nhắn tự động',
@@ -70,7 +70,7 @@ export default function Product() {
       ]
     }
   ];
-  
+
   const pricingPlans = [
     {
       name: 'Cơ bản',
@@ -86,9 +86,9 @@ export default function Product() {
       popular: false
     },
     {
-      name: 'Premium',
-      price: '99.000đ/tháng',
-      description: 'Dành cho cá nhân cần tối ưu năng suất',
+      name: 'Premium Student Mini',
+      price: '59.000đ/tháng',
+      description: 'Dành cho sinh viên cần tối ưu năng suất',
       features: [
         'Tất cả tính năng cơ bản',
         'Trợ lý AI cá nhân',
@@ -100,9 +100,9 @@ export default function Product() {
       popular: true
     },
     {
-      name: 'Business',
+      name: 'Premium Working Plan Mini',
       price: '299.000đ/tháng',
-      description: 'Dành cho đội nhóm và doanh nghiệp',
+      description: 'Dành cho người đi làm ở mức thu nhập trung bình',
       features: [
         'Tất cả tính năng Premium',
         'Quản lý dự án cho nhóm',
@@ -151,25 +151,25 @@ export default function Product() {
       <section className="py-16 md:py-20 relative overflow-hidden">
         {/* Purple gradient background */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden -z-10">
-          <div className="absolute -top-[30%] -right-[15%] w-[60%] h-[60%] rounded-full bg-purple-100 dark:bg-purple-900/20 blur-[80px] opacity-60"></div>
-          <div className="absolute bottom-[5%] -left-[15%] w-[50%] h-[50%] rounded-full bg-purple-100 dark:bg-purple-900/20 blur-[80px] opacity-60"></div>
+          <div className="absolute -top-[30%] -right-[15%] w-[60%] h-[60%] rounded-full bg-purple-100 blur-[80px] opacity-60"></div>
+          <div className="absolute bottom-[5%] -left-[15%] w-[50%] h-[50%] rounded-full bg-purple-100 blur-[80px] opacity-60"></div>
         </div>
 
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               className="text-center lg:text-left"
             >
-              <span className="inline-block py-1 px-3 rounded-full text-sm font-medium bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-300 mb-4">
+              <span className="inline-block py-1 px-3 rounded-full text-sm font-medium bg-purple-100 text-purple-600 mb-4">
                 Giới thiệu ứng dụng
               </span>
-              <h1 className="heading-xl mb-6">
-                <span className="text-purple-600 dark:text-purple-400">DO⁺</span> - Trợ lý quản lý thời gian thông minh
+              <h1 className="heading-xl uppercase mb-6 text-[#0600AB]">
+                <span className="text-[#0600AB]">DO⁺</span> - Trợ lý quản lý thời gian thông minh
               </h1>
-              <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-lg mx-auto lg:mx-0">
+              <p className="text-lg md:text-xl text-[#0600AB] mb-8 max-w-lg mx-auto lg:mx-0">
                 Ứng dụng DO⁺ kết hợp công nghệ AI tiên tiến và giao diện thân thiện, giúp bạn quản lý thời gian và nâng cao hiệu suất công việc.
               </p>
 
@@ -189,11 +189,11 @@ export default function Product() {
                     <StarIcon key={i} className="h-5 w-5 text-yellow-400" />
                   ))}
                 </div>
-                <span className="ml-2 text-gray-600 dark:text-gray-300">4.8/5 từ 2,500+ đánh giá</span>
+                <span className="ml-2 text-[#0600AB]/80">4.8/5 từ 100+ đánh giá</span>
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
@@ -201,157 +201,89 @@ export default function Product() {
             >
               <div className="relative z-10">
                 {/* Main phone mockup */}
-                <div className="bg-white dark:bg-gray-900 rounded-3xl shadow-xl overflow-hidden border-8 border-gray-100 dark:border-gray-800">
-                  <div className="aspect-[9/18] w-full bg-gradient-to-br from-purple-600 to-violet-500 relative">
-                    {/* App UI Mockup */}
-                    <div className="absolute inset-0 p-4 flex flex-col">
-                      {/* Status bar */}
-                      <div className="flex justify-between items-center mb-4">
-                        <div className="text-white text-sm">9:41</div>
-                        <div className="flex space-x-2">
-                          <div className="w-4 h-4 rounded-full bg-white/20"></div>
-                          <div className="w-4 h-4 rounded-full bg-white/20"></div>
-                          <div className="w-4 h-4 rounded-full bg-white/20"></div>
-                        </div>
-                      </div>
-                      
-                      {/* App content */}
-                      <div className="bg-white/10 rounded-lg p-3 mb-3">
-                        <div className="flex items-center mb-2">
-                          <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center mr-2">
-                            <span className="text-xs font-bold text-white">D+</span>
-                          </div>
-                          <div>
-                            <div className="text-white text-sm font-medium">DO⁺ Trợ lý</div>
-                            <div className="text-white/70 text-xs">Hôm nay</div>
-                          </div>
-                        </div>
-                        <div className="text-white/90 text-sm">
-                          Xin chào! Hôm nay bạn có 3 công việc ưu tiên cần hoàn thành và 1 cuộc họp lúc 15:00.
-                        </div>
-                      </div>
-                      
-                      {/* Task list */}
-                      <div className="bg-white/10 rounded-lg p-3 mb-auto">
-                        <div className="text-white text-sm font-medium mb-2">Công việc hôm nay</div>
-                        <div className="space-y-2">
-                          <div className="flex items-center">
-                            <div className="w-5 h-5 rounded-full border border-white/50 mr-2"></div>
-                            <div className="text-white/90 text-sm">Hoàn thành báo cáo</div>
-                          </div>
-                          <div className="flex items-center">
-                            <div className="w-5 h-5 rounded-full border border-white/50 flex items-center justify-center mr-2">
-                              <div className="w-3 h-3 rounded-full bg-white"></div>
-                            </div>
-                            <div className="text-white/60 line-through text-sm">Gửi email xác nhận</div>
-                          </div>
-                          <div className="flex items-center">
-                            <div className="w-5 h-5 rounded-full border border-white/50 mr-2"></div>
-                            <div className="text-white/90 text-sm">Chuẩn bị tài liệu họp</div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      {/* Bottom navigation */}
-                      <div className="bg-white/10 rounded-lg p-2 flex justify-around">
-                        <div className="w-10 h-10 rounded-full bg-white/30 flex items-center justify-center"></div>
-                        <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center"></div>
-                        <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center"></div>
-                        <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Floating card */}
-                <div className="absolute -bottom-6 -right-12 bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 w-32">
-                  <div className="flex items-center mb-2">
-                    <div className="w-6 h-6 rounded-full bg-purple-100 dark:bg-purple-900/50 flex items-center justify-center mr-2">
-                      <CheckCircleIcon className="w-4 h-4 text-purple-600 dark:text-purple-400" />
-                    </div>
-                    <div className="text-sm font-medium">Báo cáo</div>
-                  </div>
-                  <div className="text-xs text-gray-500 dark:text-gray-400">
-                    Đã hoàn thành 85% công việc tuần này
-                  </div>
-                </div>
+                <img
+                  src="/images/app.png"
+                  alt="DO⁺ App"
+                  className="w-[120%] h-[120%] max-w-none rounded-3xl"
+                  style={{ objectFit: 'contain' }}
+                />
               </div>
 
               {/* Decorative elements */}
-              <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] aspect-square rounded-full bg-gradient-to-tr from-purple-200 to-violet-200 dark:from-purple-900/30 dark:to-violet-900/30 blur-2xl opacity-50"></div>
-              <div className="absolute bottom-10 -left-20 -z-10 w-32 h-32 bg-gradient-to-br from-purple-300 to-pink-300 dark:from-purple-800/30 dark:to-pink-800/30 rounded-full blur-xl opacity-70"></div>
+              <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] aspect-square rounded-full bg-gradient-to-tr from-purple-200 to-violet-200 blur-2xl opacity-50"></div>
+              <div className="absolute bottom-10 -left-20 -z-10 w-32 h-32 bg-gradient-to-br from-purple-300 to-pink-300 rounded-full blur-xl opacity-70"></div>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Problem solution section */}
-      <section className="py-16 bg-gray-50 dark:bg-gray-900/50" id="overview">
+      <section className="py-16 bg-gray-50" id="overview">
         <div className="container-custom">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <motion.span 
+            <motion.span
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="inline-block py-1 px-3 rounded-full text-sm font-medium bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-300 mb-4"
+              className="inline-block py-1 px-3 rounded-full text-sm font-medium bg-purple-100 text-purple-600 mb-4"
             >
               Vấn đề và giải pháp
             </motion.span>
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
-              className="heading-lg mb-6"
+              className="heading-lg uppercase mb-6 text-[#0600AB]"
             >
-              Thời gian là tài nguyên <span className="text-purple-600 dark:text-purple-400">quý giá nhất</span>
+              Thời gian là tài nguyên <span className="text-[#0600AB]">quý giá nhất</span>
             </motion.h2>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-lg text-gray-600 dark:text-gray-300"
+              className="text-lg text-[#0600AB]"
             >
               Thế hệ GenZ đang phải đối mặt với nhiều áp lực và mất cân bằng giữa công việc, học tập và cuộc sống cá nhân. DO⁺ được tạo ra để giải quyết thách thức này.
             </motion.p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-sm"
+              className="bg-white rounded-xl p-8 shadow-sm"
             >
-              <h3 className="text-xl font-semibold mb-4">Vấn đề</h3>
+              <h3 className="text-xl font-semibold mb-4 text-[#0600AB]">Vấn đề</h3>
               <ul className="space-y-4">
                 <li className="flex">
                   <span className="text-red-500 mr-3">✖</span>
-                  <span className="text-gray-600 dark:text-gray-300">Quá tải thông tin và đa nhiệm</span>
+                  <span className="text-[#0600AB]/80">Quá tải thông tin và đa nhiệm</span>
                 </li>
                 <li className="flex">
                   <span className="text-red-500 mr-3">✖</span>
-                  <span className="text-gray-600 dark:text-gray-300">Khó khăn trong việc sắp xếp thứ tự ưu tiên</span>
+                  <span className="text-[#0600AB]/80">Khó khăn trong việc sắp xếp thứ tự ưu tiên</span>
                 </li>
                 <li className="flex">
                   <span className="text-red-500 mr-3">✖</span>
-                  <span className="text-gray-600 dark:text-gray-300">Mất tập trung bởi thông báo và mạng xã hội</span>
+                  <span className="text-[#0600AB]/80">Mất tập trung bởi thông báo và mạng xã hội</span>
                 </li>
                 <li className="flex">
                   <span className="text-red-500 mr-3">✖</span>
-                  <span className="text-gray-600 dark:text-gray-300">Thường xuyên cảm thấy bị trễ deadline</span>
+                  <span className="text-[#0600AB]/80">Thường xuyên cảm thấy bị trễ deadline</span>
                 </li>
                 <li className="flex">
                   <span className="text-red-500 mr-3">✖</span>
-                  <span className="text-gray-600 dark:text-gray-300">Khó cân bằng giữa công việc và cuộc sống</span>
+                  <span className="text-[#0600AB]/80">Khó cân bằng giữa công việc và cuộc sống</span>
                 </li>
               </ul>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -390,32 +322,32 @@ export default function Product() {
       <section className="py-16 md:py-24" id="features">
         <div className="container-custom">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <motion.span 
+            <motion.span
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="inline-block py-1 px-3 rounded-full text-sm font-medium bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-300 mb-4"
+              className="inline-block py-1 px-3 rounded-full text-sm font-medium bg-purple-100 text-purple-600 mb-4"
             >
               Tính năng nổi bật
             </motion.span>
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
-              className="heading-lg mb-6"
+              className="heading-lg uppercase mb-6 text-[#0600AB]"
             >
-              Khám phá sức mạnh của <span className="text-purple-600 dark:text-purple-400">DO⁺</span>
+              Khám phá sức mạnh của <span className="text-[#0600AB]">DO⁺</span>
             </motion.h2>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-lg text-gray-600 dark:text-gray-300"
+              className="text-lg text-[#0600AB]"
             >
-              DO⁺ kết hợp các tính năng tiên tiến đượhiểu trên nền tảng công nghệ AI hiện đại,tạo ra trải nghiệm quản lý thời gian vượt trội.
+              DO⁺ kết hợp các tính năng tiên tiến trên nền tảng công nghệ AI hiện đại, tạo ra trải nghiệm quản lý thời gian vượt trội.
             </motion.p>
           </div>
 
@@ -426,10 +358,9 @@ export default function Product() {
                 <Tab
                   key={idx}
                   className={({ selected }) =>
-                    `py-2 px-4 rounded-lg text-sm font-medium transition-all ${
-                      selected
-                        ? 'bg-purple-600 text-white shadow-md'
-                        : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+                    `py-2 px-4 rounded-lg text-sm font-medium transition-all ${selected
+                      ? 'bg-purple-600 text-white shadow-md'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                     }`
                   }
                 >
@@ -443,7 +374,7 @@ export default function Product() {
             <Tab.Panels>
               {features.map((feature, idx) => (
                 <Tab.Panel key={idx}>
-                  <motion.div 
+                  <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
@@ -452,38 +383,42 @@ export default function Product() {
                     {idx % 2 === 0 ? (
                       <>
                         <div>
-                          <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
-                          <p className="text-gray-600 dark:text-gray-300 mb-6">{feature.description}</p>
+                          <h3 className="text-2xl font-bold mb-4 text-[#0600AB]">{feature.title}</h3>
+                          <p className="text-[#0600AB]/90 mb-6">{feature.description}</p>
                           <ul className="space-y-3">
                             {feature.benefits.map((benefit, benefitIdx) => (
                               <li key={benefitIdx} className="flex items-start">
-                                <CheckCircleIcon className="w-6 h-6 text-purple-600 dark:text-purple-400 mr-3 flex-shrink-0" />
-                                <span className="text-gray-600 dark:text-gray-300">{benefit}</span>
+                                <CheckCircleIcon className="w-6 h-6 text-purple-600 mr-3 flex-shrink-0" />
+                                <span className="text-[#0600AB]/80">{benefit}</span>
                               </li>
                             ))}
                           </ul>
                         </div>
-                        <div className="bg-gradient-to-br from-purple-100 to-indigo-100 dark:from-purple-900/30 dark:to-indigo-900/30 rounded-lg overflow-hidden flex items-center justify-center p-8 aspect-square">
-                          <div className="text-2xl font-bold text-purple-600 dark:text-purple-400 text-center">
-                            {feature.title}
-                          </div>
+                        <div className="rounded-lg overflow-hidden flex items-center justify-center p-8 aspect-square">
+                          <img
+                            src={feature.image}
+                            alt={feature.title}
+                            className="object-contain w-full h-full"
+                          />
                         </div>
                       </>
                     ) : (
                       <>
-                        <div className="bg-gradient-to-br from-purple-100 to-indigo-100 dark:from-purple-900/30 dark:to-indigo-900/30 rounded-lg overflow-hidden flex items-center justify-center p-8 aspect-square order-2 lg:order-1">
-                          <div className="text-2xl font-bold text-purple-600 dark:text-purple-400 text-center">
-                            {feature.title}
-                          </div>
+                        <div className="bg-gradient-to-br from-purple-100 to-indigo-100 rounded-lg overflow-hidden flex items-center justify-center p-8 aspect-square order-2 lg:order-1">
+                          <img
+                            src={feature.image}
+                            alt={feature.title}
+                            className="object-contain w-full h-full"
+                          />
                         </div>
                         <div className="order-1 lg:order-2">
-                          <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
-                          <p className="text-gray-600 dark:text-gray-300 mb-6">{feature.description}</p>
+                          <h3 className="text-2xl font-bold mb-4 text-[#0600AB]">{feature.title}</h3>
+                          <p className="text-[#0600AB]/90 mb-6">{feature.description}</p>
                           <ul className="space-y-3">
                             {feature.benefits.map((benefit, benefitIdx) => (
                               <li key={benefitIdx} className="flex items-start">
-                                <CheckCircleIcon className="w-6 h-6 text-purple-600 dark:text-purple-400 mr-3 flex-shrink-0" />
-                                <span className="text-gray-600 dark:text-gray-300">{benefit}</span>
+                                <CheckCircleIcon className="w-6 h-6 text-purple-600 mr-3 flex-shrink-0" />
+                                <span className="text-[#0600AB]/80">{benefit}</span>
                               </li>
                             ))}
                           </ul>
@@ -498,128 +433,66 @@ export default function Product() {
         </div>
       </section>
 
-      {/* App screenshots */}
-      <section className="py-16 bg-gray-50 dark:bg-gray-900/50">
-        <div className="container-custom">
-          <motion.div 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-center max-w-3xl mx-auto mb-12"
-          >
-            <span className="inline-block py-1 px-3 rounded-full text-sm font-medium bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-300 mb-4">
-              Giao diện trực quan
-            </span>
-            <h2 className="heading-lg mb-6">
-              Thiết kế tinh tế, <span className="text-purple-600 dark:text-purple-400">sử dụng dễ dàng</span>
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300">
-              DO⁺ được thiết kế tập trung vào trải nghiệm người dùng, với giao diện thân thiện và dễ sử dụng cho mọi đối tượng.
-            </p>
-          </motion.div>
-
-          <Tab.Group>
-            <Tab.List className="flex overflow-x-auto scrollbar-hide mb-8 justify-center space-x-2">
-              {screenshotTabs.map((tab) => (
-                <Tab
-                  key={tab}
-                  className={({ selected }) =>
-                    `py-2 px-4 rounded-lg text-sm font-medium transition-all whitespace-nowrap ${
-                      selected
-                        ? 'bg-purple-600 text-white shadow-md'
-                        : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
-                    }`
-                  }
-                >
-                  {tab}
-                </Tab>
-              ))}
-            </Tab.List>
-            <Tab.Panels>
-              {screenshotTabs.map((tab, idx) => (
-                <Tab.Panel key={idx}>
-                  <motion.div 
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5 }}
-                    className="flex justify-center"
-                  >
-                    <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg max-w-3xl">
-                      <div className="bg-gradient-to-br from-purple-400/20 to-indigo-400/20 aspect-[16/9] rounded-lg flex items-center justify-center">
-                        <div className="text-xl font-medium text-purple-600 dark:text-purple-400">{tab}</div>
-                      </div>
-                    </div>
-                  </motion.div>
-                </Tab.Panel>
-              ))}
-            </Tab.Panels>
-          </Tab.Group>
-        </div>
-      </section>
-
       {/* Pricing section */}
       <section className="py-16 md:py-24" id="pricing">
         <div className="container-custom">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto mb-16"
           >
-            <span className="inline-block py-1 px-3 rounded-full text-sm font-medium bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-300 mb-4">
+            <span className="inline-block py-1 px-3 rounded-full text-sm font-medium bg-purple-100 text-purple-600 mb-4">
               Gói dịch vụ
             </span>
-            <h2 className="heading-lg mb-6">
-              Chọn gói phù hợp với <span className="text-purple-600 dark:text-purple-400">nhu cầu của bạn</span>
+            <h2 className="heading-lg uppercase mb-6 text-[#0600AB]">
+              Chọn gói phù hợp với <span className="text-[#0600AB]">nhu cầu</span>
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300">
+            <p className="text-lg text-[#0600AB]">
               Chúng tôi cung cấp nhiều gói dịch vụ linh hoạt, đảm bảo bạn chỉ trả tiền cho những tính năng mà bạn cần.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, idx) => (
-              <motion.div 
+              <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 viewport={{ once: true }}
-                className={`bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm border ${
-                  plan.popular 
-                    ? 'border-purple-400 dark:border-purple-500 shadow-lg shadow-purple-100 dark:shadow-none relative' 
-                    : 'border-gray-200 dark:border-gray-700'
-                }`}
+                className={`bg-white rounded-xl overflow-hidden shadow-sm border flex flex-col h-full ${plan.popular
+                    ? 'border-purple-400 shadow-lg shadow-purple-100'
+                    : 'border-gray-200'
+                  }`}
               >
                 {plan.popular && (
                   <div className="bg-gradient-to-r from-purple-600 to-violet-600 text-white text-xs font-bold uppercase py-1 px-3 text-center">
                     Phổ biến nhất
                   </div>
                 )}
-                <div className="p-6 md:p-8">
-                  <h3 className="text-xl font-bold mb-2">{plan.name}</h3>
+                <div className="p-6 md:p-8 flex flex-col h-full">
+                  <h3 className="text-xl font-bold mb-2 text-[#0600AB]">{plan.name}</h3>
                   <div className="mb-4">
-                    <span className="text-3xl font-bold">{plan.price}</span>
+                    <span className="text-3xl font-bold text-[#0600AB]">{plan.price}</span>
                   </div>
-                  <p className="text-gray-600 dark:text-gray-300 mb-6">
+                  <p className="text-[#0600AB]/80 mb-6">
                     {plan.description}
                   </p>
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIdx) => (
                       <li key={featureIdx} className="flex items-center">
-                        <CheckCircleIcon className="w-5 h-5 text-purple-600 dark:text-purple-400 mr-3 flex-shrink-0" />
-                        <span className="text-gray-600 dark:text-gray-300">{feature}</span>
+                        <CheckCircleIcon className="w-5 h-5 text-purple-600 mr-3 flex-shrink-0" />
+                        <span className="text-[#0600AB]/80">{feature}</span>
                       </li>
                     ))}
                   </ul>
-                  <button 
-                    className={`w-full rounded-lg font-medium py-3 px-4 ${
-                      plan.popular 
-                        ? 'bg-gradient-to-r from-purple-600 to-violet-600 text-white hover:from-purple-700 hover:to-violet-700' 
-                        : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600'
-                    } transition-colors`}
+                  <button
+                    className={`w-full rounded-lg font-medium py-3 px-4 mt-auto ${plan.popular
+                        ? 'bg-gradient-to-r from-purple-600 to-violet-600 text-white hover:from-purple-700 hover:to-violet-700'
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      } transition-colors`}
                   >
                     {plan.cta}
                   </button>
@@ -631,22 +504,22 @@ export default function Product() {
       </section>
 
       {/* FAQ section */}
-      <section className="py-16 bg-gray-50 dark:bg-gray-900/50">
+      <section className="py-16 bg-gray-50">
         <div className="container-custom">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto mb-12"
           >
-            <span className="inline-block py-1 px-3 rounded-full text-sm font-medium bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-300 mb-4">
+            <span className="inline-block py-1 px-3 rounded-full text-sm font-medium bg-purple-100 text-purple-600 mb-4">
               Câu hỏi thường gặp
             </span>
-            <h2 className="heading-lg mb-6">
-              Giải đáp thắc mắc thường gặp về <span className="text-purple-600 dark:text-purple-400">DO⁺</span>
+            <h2 className="heading-lg uppercase mb-6 text-[#0600AB]">
+              Giải đáp thắc mắc thường gặp về <span className="text-[#0600AB]">DO⁺</span>
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300">
+            <p className="text-lg text-[#0600AB]">
               Dưới đây là những câu hỏi chúng tôi thường nhận được từ người dùng. Nếu không tìm thấy câu trả lời bạn cần, hãy liên hệ với đội ngũ hỗ trợ của chúng tôi.
             </p>
           </motion.div>
@@ -654,38 +527,38 @@ export default function Product() {
           <div className="max-w-3xl mx-auto">
             <div className="space-y-6">
               {faqs.map((faq, idx) => (
-                <motion.div 
+                <motion.div
                   key={idx}
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6"
+                  className="bg-white rounded-lg shadow-sm p-6"
                 >
                   <div className="flex items-start">
                     <div className="mr-4 mt-1">
-                      <QuestionMarkCircleIcon className="w-5 h-5 text-purple-600 dark:text-purple-400" />
+                      <QuestionMarkCircleIcon className="w-5 h-5 text-purple-600" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-lg mb-2">{faq.question}</h3>
-                      <p className="text-gray-600 dark:text-gray-300">{faq.answer}</p>
+                      <h3 className="font-semibold text-lg mb-2 text-[#0600AB]">{faq.question}</h3>
+                      <p className="text-[#0600AB]/80">{faq.answer}</p>
                     </div>
                   </div>
                 </motion.div>
               ))}
             </div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
               viewport={{ once: true }}
               className="text-center mt-10"
             >
-              <p className="mb-4">Vẫn còn thắc mắc? Hãy liên hệ với chúng tôi</p>
-              <Link 
+              <p className="mb-4 text-[#0600AB]">Vẫn còn thắc mắc? Hãy liên hệ với chúng tôi</p>
+              <Link
                 href="/contact"
-                className="inline-flex items-center font-medium text-purple-600 dark:text-purple-400 hover:text-purple-800 dark:hover:text-purple-300"
+                className="inline-flex items-center font-medium text-[#6263FF] hover:text-[#0600AB]"
               >
                 Liên hệ hỗ trợ <span className="ml-1">→</span>
               </Link>
@@ -698,15 +571,15 @@ export default function Product() {
       <section className="py-16 md:py-24 relative overflow-hidden" id="download">
         {/* Purple gradient background */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden -z-10">
-          <div className="absolute -top-[30%] -right-[15%] w-[60%] h-[60%] rounded-full bg-purple-100 dark:bg-purple-900/20 blur-[80px] opacity-60"></div>
-          <div className="absolute bottom-[5%] -left-[15%] w-[50%] h-[50%] rounded-full bg-purple-100 dark:bg-purple-900/20 blur-[80px] opacity-60"></div>
+          <div className="absolute -top-[30%] -right-[15%] w-[60%] h-[60%] rounded-full bg-purple-100 blur-[80px] opacity-60"></div>
+          <div className="absolute bottom-[5%] -left-[15%] w-[50%] h-[50%] rounded-full bg-purple-100 blur-[80px] opacity-60"></div>
         </div>
-        
+
         <div className="container-custom">
           <div className="bg-gradient-to-r from-purple-600 to-violet-600 rounded-3xl overflow-hidden shadow-xl">
             <div className="px-6 py-12 md:p-12">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6 }}
@@ -740,8 +613,8 @@ export default function Product() {
                     </button>
                   </div>
                 </motion.div>
-                
-                <motion.div 
+
+                <motion.div
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6 }}
@@ -753,8 +626,12 @@ export default function Product() {
                       <div className="absolute top-0 left-0 w-40 h-40 bg-white rounded-full blur-3xl"></div>
                       <div className="absolute bottom-0 right-0 w-40 h-40 bg-white rounded-full blur-3xl"></div>
                     </div>
-                    <div className="aspect-[3/2] bg-gradient-to-br from-purple-400/20 to-indigo-400/20 rounded-lg flex items-center justify-center">
-                      <div className="text-white text-3xl font-bold">DO⁺</div>
+                    <div className="aspect-[3/2] rounded-lg flex items-center justify-center">
+                      <img
+                        src="/images/banner.png"
+                        alt="DO⁺ App"
+                        className="object-contain w-3/4 h-3/4"
+                      />
                     </div>
                   </div>
                 </motion.div>

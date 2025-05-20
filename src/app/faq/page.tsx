@@ -37,6 +37,36 @@ export default function FAQ() {
   // Mock data for FAQs
   const faqs: FAQ[] = [
     {
+      id: 'faq-crelatech-1',
+      question: 'CreLaTech là gì?',
+      answer: 'CreLaTech là một nhóm dự án sáng tạo ứng dụng công nghệ do sinh viên năm 3 trường Đại học Văn Lang sáng lập vào năm 2025, với mục tiêu tạo ra các giải pháp số phục vụ học tập, làm việc và phát triển bản thân cho người trẻ.',
+      category: 'general'
+    },
+    {
+      id: 'faq-crelatech-2',
+      question: 'Sản phẩm đầu tiên của CreLaTech là gì?',
+      answer: 'Sản phẩm đầu tiên của chúng tôi là DO+ – trợ lý học tập và làm việc sử dụng AI, hỗ trợ lập kế hoạch, nhắc nhở thông minh, quản lý thời gian, phân bổ chi tiêu và cá nhân hóa trải nghiệm người dùng.',
+      category: 'general'
+    },
+    {
+      id: 'faq-crelatech-3',
+      question: 'CreLaTech có phải là công ty công nghệ không?',
+      answer: 'Hiện tại, CreLaTech hoạt động như một nhóm dự án khởi nghiệp sáng tạo từ sinh viên, định hướng trở thành một startup công nghệ trong tương lai gần.',
+      category: 'general'
+    },
+    {
+      id: 'faq-crelatech-4',
+      question: 'CreLaTech có mở cộng tác viên không?',
+      answer: 'Có! Chúng tôi luôn tìm kiếm các bạn trẻ đam mê công nghệ, thiết kế, marketing và phát triển sản phẩm để cùng tham gia hành trình sáng tạo. Hãy theo dõi fanpage để không bỏ lỡ các đợt tuyển CTV nhé!',
+      category: 'general'
+    },
+    {
+      id: 'faq-crelatech-5',
+      question: 'Tôi có thể góp ý hoặc đề xuất tính năng mới cho DO+ không?',
+      answer: 'Chúng tôi rất hoan nghênh! Bạn có thể gửi phản hồi qua fanpage hoặc form góp ý trong ứng dụng. Mỗi ý kiến của bạn là một viên gạch xây dựng sản phẩm ngày một tốt hơn.',
+      category: 'general'
+    },
+    {
       id: 'faq-1',
       question: 'DO⁺ là gì và giúp giải quyết vấn đề gì?',
       answer: 'DO⁺ là ứng dụng quản lý thời gian và công việc thông minh, tích hợp công nghệ AI. Ứng dụng giúp người dùng sắp xếp lịch trình hiệu quả, theo dõi công việc, đặt mục tiêu và nâng cao năng suất làm việc. Nhờ trí tuệ nhân tạo, DO⁺ có thể đưa ra gợi ý phù hợp với thói quen và sở thích của từng người dùng.',
@@ -148,13 +178,13 @@ export default function FAQ() {
             variants={fadeIn}
             className="text-center max-w-3xl mx-auto"
           >
-            <span className="inline-block py-1 px-3 rounded-full text-sm font-medium bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-300 mb-4">
+            <span className="inline-block py-1 px-3 rounded-full text-sm font-medium bg-[#6263FF]/20 text-[#6263FF] mb-4">
               FAQ
             </span>
-            <h1 className="heading-xl mb-6">
-              Câu hỏi thường gặp về <span className="text-purple-600 dark:text-purple-400">DO⁺</span>
+            <h1 className="heading-xl uppercase mb-6">
+              Câu hỏi thường gặp về <span className="text-[#0600AB]">DO⁺</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8">
+            <p className="text-lg md:text-xl text-[#0600AB] mb-8">
               Tìm câu trả lời nhanh chóng cho những thắc mắc của bạn về ứng dụng DO⁺
             </p>
 
@@ -191,8 +221,8 @@ export default function FAQ() {
                 onClick={() => setActiveCategory(category.id)}
                 className={`py-2 px-4 rounded-lg text-sm font-medium transition-all ${
                   activeCategory === category.id
-                    ? 'bg-purple-600 text-white'
-                    : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+                    ? 'bg-[#6263FF] text-white'
+                    : 'bg-[#6263FF]/10 text-[#0600AB] hover:bg-[#6263FF]/20'
                 }`}
               >
                 {category.name}
@@ -221,7 +251,7 @@ export default function FAQ() {
                     >
                       <div className="flex items-start">
                         <QuestionMarkCircleIcon className="w-6 h-6 text-purple-600 dark:text-purple-400 mr-3 flex-shrink-0" />
-                        <span className="font-medium text-gray-900 dark:text-white">{faq.question}</span>
+                        <span className="font-medium text-[#0600AB]">{faq.question}</span>
                       </div>
                       {openFaqId === faq.id ? 
                         <ChevronUpIcon className="w-5 h-5 text-gray-500" /> : 
@@ -229,7 +259,7 @@ export default function FAQ() {
                       }
                     </button>
                     {openFaqId === faq.id && (
-                      <div className="px-6 pb-4 text-gray-600 dark:text-gray-300 border-t border-gray-100 dark:border-gray-700">
+                      <div className="px-6 pb-4 text-[#0600AB]/80 border-t border-gray-100">
                         <p className="pt-4">{faq.answer}</p>
                       </div>
                     )}
@@ -241,14 +271,14 @@ export default function FAQ() {
                 <div className="w-16 h-16 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4">
                   <QuestionMarkCircleIcon className="w-8 h-8 text-gray-400" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Không tìm thấy câu hỏi</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-6">
+                <h3 className="text-xl font-bold mb-2 text-[#0600AB]">Không tìm thấy câu hỏi</h3>
+                <p className="text-[#0600AB]/80 mb-6">
                   Không tìm thấy kết quả phù hợp với từ khóa "{searchQuery}". Vui lòng thử lại với từ khóa khác.
                 </p>
                 {searchQuery && (
                   <button
                     onClick={() => setSearchQuery('')}
-                    className="text-purple-600 dark:text-purple-400 font-medium hover:underline"
+                    className="text-[#6263FF] font-medium hover:underline"
                   >
                     Xóa tìm kiếm
                   </button>
@@ -265,8 +295,8 @@ export default function FAQ() {
             variants={fadeIn}
             className="mt-16 text-center max-w-2xl mx-auto"
           >
-            <h2 className="text-2xl font-bold mb-4">Vẫn chưa tìm thấy câu trả lời?</h2>
-            <p className="text-gray-600 dark:text-gray-300 mb-8">
+            <h2 className="text-2xl font-bold mb-4 text-[#0600AB]">Vẫn chưa tìm thấy câu trả lời?</h2>
+            <p className="text-[#0600AB]/80 mb-8">
               Đừng lo lắng, đội ngũ hỗ trợ của chúng tôi luôn sẵn sàng giúp đỡ bạn. Hãy liên hệ với chúng tôi qua các kênh sau:
             </p>
             

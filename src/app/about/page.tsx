@@ -30,7 +30,7 @@ export default function About() {
     {
       name: 'Kim Đặng Tùng Uy',
       role: 'CEO (Chief Executive Officer)',
-      image: '/team/placeholder.jpg',
+      image: '/team/uy.jpg',
       bio: 'Với hơn 10 năm kinh nghiệm trong lĩnh vực phát triển phần mềm và AI, Tùng Uy đã dẫn dắt CreLaTech từ ý tưởng đến thực tế. Anh là người xây dựng tầm nhìn và định hướng phát triển dài hạn cho công ty.',
       social: {
         linkedin: 'https://linkedin.com',
@@ -40,7 +40,7 @@ export default function About() {
     {
       name: 'Huỳnh Minh Thư',
       role: 'Đồng sáng lập & CTO',
-      image: '/team/placeholder.jpg',
+      image: '/team/thu.jpg',
       bio: 'Minh Thư là chuyên gia về AI và machine learning, với sứ mệnh đưa những công nghệ tiên tiến nhất vào các sản phẩm của CreLaTech. Cô điều hành toàn bộ hoạt động nghiên cứu và phát triển công nghệ của công ty.',
       social: {
         linkedin: 'https://linkedin.com',
@@ -50,7 +50,7 @@ export default function About() {
     {
       name: 'Thái Thị Mỹ Huệ',
       role: 'CFO & Co-Founder',
-      image: '/team/placeholder.jpg',
+      image: '/team/hue.jpg',
       bio: 'Với bề dày kinh nghiệm trong ngành digital marketing, Mỹ Huệ chịu trách nhiệm định vị thương hiệu CreLaTech trên thị trường và quản lý mọi hoạt động tài chính, đảm bảo sự phát triển bền vững của công ty.',
       social: {
         linkedin: 'https://linkedin.com',
@@ -60,7 +60,7 @@ export default function About() {
     {
       name: 'Hà Thiên Đạt',
       role: 'Trưởng phòng thiết kế UX/UI',
-      image: '/team/placeholder.jpg',
+      image: '/team/dat.jpg',
       bio: 'Thiên Đạt là người đứng sau những trải nghiệm người dùng tuyệt vời của DO⁺, với triết lý thiết kế "đơn giản nhưng hiệu quả". Anh và đội ngũ của mình không ngừng nỗ lực để mang đến giao diện trực quan và dễ sử dụng nhất.',
       social: {
         linkedin: 'https://linkedin.com',
@@ -70,8 +70,8 @@ export default function About() {
     {
       name: 'Đặng Cao Trí',
       role: 'Giám đốc Marketing',
-      image: '/team/placeholder.jpg',
-      bio: 'Cao Trí là người xây dựng chiến lược tiếp thị và truyền thông của CreLaTech. Với kinh nghiệm dày dặn trong ngành marketing kỹ thuật số, anh giúp DO⁺ tiếp cận đúng đối tượng khách hàng mục tiêu một cách hiệu quả.',
+      image: '/team/tri.jpg',
+      bio: 'Cao Trí là người xây dựng chiến lược tiếp thị và truyền thông của CreLaTech. Với kinh nghiệm dày dạn trong ngành marketing kỹ thuật số, anh giúp DO⁺ tiếp cận đúng đối tượng khách hàng mục tiêu một cách hiệu quả.',
       social: {
         linkedin: 'https://linkedin.com',
         twitter: 'https://twitter.com'
@@ -82,23 +82,23 @@ export default function About() {
   const values = [
     {
       icon: <SparklesIcon className="w-6 h-6" />,
-      title: 'Sáng tạo không giới hạn',
+      title: 'Sáng tạo thực tiễn',
       description: 'Chúng tôi khuyến khích tư duy đổi mới và tìm kiếm giải pháp sáng tạo cho mọi thách thức.'
     },
     {
       icon: <RocketLaunchIcon className="w-6 h-6" />,
-      title: 'Không ngừng phát triển',
-      description: 'Chúng tôi luôn tìm cách cải thiện và phát triển, không bao giờ hài lòng với hiện tại.'
+      title: 'Kết nối & Cộng hưởng',
+      description: 'Đề cao tinh thần làm việc nhóm, học hỏi lẫn nhau và cộng tác liên ngành.'
     },
     {
       icon: <LightBulbIcon className="w-6 h-6" />,
-      title: 'Lấy người dùng làm trung tâm',
-      description: 'Mọi quyết định của chúng tôi đều hướng tới việc nâng cao trải nghiệm và giá trị cho người dùng.'
+      title: 'Linh hoạt & Thích ứng',
+      description: 'Luôn cập nhật công nghệ, xu hướng mới và thích ứng với sự thay đổi.'
     },
     {
       icon: <PresentationChartLineIcon className="w-6 h-6" />,
-      title: 'Cam kết chất lượng',
-      description: 'Chúng tôi theo đuổi sự xuất sắc trong mọi chi tiết, từ code cho đến trải nghiệm người dùng.'
+      title: 'Lãnh đạo bản thân',
+      description: 'Khuyến khích mỗi cá nhân trong đội ngũ chủ động, tự học, tự lập và chịu trách nhiệm với hành động của mình.'
     }
   ];
 
@@ -123,8 +123,8 @@ export default function About() {
       {/* Hero Section */}
       <section className="py-16 md:py-20 relative">
         <div className="absolute inset-0 pointer-events-none overflow-hidden -z-10">
-          <div className="absolute -top-20 -right-20 w-[40%] h-[40%] rounded-full bg-purple-100 dark:bg-purple-900/20 blur-[80px] opacity-60"></div>
-          <div className="absolute bottom-0 left-0 w-[40%] h-[40%] rounded-full bg-purple-100 dark:bg-purple-900/20 blur-[80px] opacity-60"></div>
+          <div className="absolute -top-20 -right-20 w-[40%] h-[40%] rounded-full bg-[#FF80A9]/20 blur-[80px] opacity-60"></div>
+          <div className="absolute bottom-0 left-0 w-[40%] h-[40%] rounded-full bg-[#FF80A9]/20 blur-[80px] opacity-60"></div>
         </div>
 
         <div className="container-custom">
@@ -133,15 +133,15 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="heading-xl mb-6"
+              className="heading-xl uppercase mb-6"
             >
-              Về <span className="text-purple-600 dark:text-purple-400">CreLaTech</span>
+              Về <span className="text-[#0600AB]">CreLaTech</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-xl text-gray-600 dark:text-gray-300 mb-8"
+              className="text-xl text-[#0600AB] mb-8"
             >
               Chúng tôi là đội ngũ đam mê công nghệ và đổi mới, với sứ mệnh tạo ra những giải pháp thông minh giúp mọi người quản lý thời gian và công việc hiệu quả hơn.
             </motion.p>
@@ -154,19 +154,16 @@ export default function About() {
               viewport={{ once: true }}
               variants={fadeIn}
             >
-              <span className="inline-block py-1 px-3 rounded-full text-sm font-medium bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-300 mb-4">
+              <span className="inline-block py-1 px-3 rounded-full text-sm font-medium bg-[#6263FF]/20 text-[#6263FF]/100 mb-4">
                 Lịch sử hình thành
               </span>
-              <h2 className="heading-lg mb-6">Hành trình của chúng tôi</h2>
-              <div className="space-y-6 text-gray-600 dark:text-gray-300">
+              <h2 className="heading-lg mb-6 text-[#0600AB]">Hành trình của chúng tôi</h2>
+              <div className="space-y-6 text-[#0600AB]">
                 <p>
-                  CreLaTech được thành lập vào năm 2020 bởi hai người bạn đại học Nguyễn Minh Tuấn và Trần Hà Vi, với tầm nhìn tạo ra các giải pháp công nghệ giúp tối ưu hóa thời gian và năng suất làm việc.
+                  <span className="font-bold">CreLaTech</span> được thành lập vào năm 2025 bởi một nhóm sinh viên năm 3 năng động đến từ Trường Đại học Văn Lang, với niềm tin rằng sự sáng tạo (Creative), công nghệ (Tech) là hai yếu tố không thể tách rời trong thời đại mới.
                 </p>
                 <p>
-                  Khởi đầu với đội ngũ chỉ 5 thành viên, chúng tôi đã phát triển thành một công ty có hơn 25 nhân sự tài năng, đa dạng về chuyên môn và văn hóa, cùng chung niềm đam mê tạo ra sản phẩm có tác động tích cực đến cuộc sống của người dùng.
-                </p>
-                <p>
-                  Sau nhiều tháng nghiên cứu và phát triển, vào tháng 6/2021, chúng tôi đã cho ra mắt ứng dụng DO⁺ phiên bản beta và nhận được phản hồi tích cực từ cộng đồng. Hiện tại, DO⁺ đã trở thành trợ lý quản lý thời gian cho hơn 50.000 người dùng mỗi tháng.
+                  Bắt đầu từ một dự án nhỏ, nhóm bạn trẻ dần phát triển CreLaTech thành một cộng đồng sáng tạo - nơi công nghệ được ứng dụng để giải quyết các vấn đề thực tiễn trong học tập, công việc và đời sống. Với tinh thần dấn thân, học hỏi và kết nối, CreLaTech không chỉ là một ý tưởng khởi nguồn, mà là một hành trình đang tiếp diễn.
                 </p>
               </div>
             </motion.div>
@@ -178,13 +175,12 @@ export default function About() {
               variants={fadeIn}
               className="relative"
             >
-              <div className="aspect-[4/3] bg-gradient-to-br from-purple-100 to-indigo-100 dark:from-purple-900/30 dark:to-indigo-900/30 rounded-lg overflow-hidden flex items-center justify-center">
-                <div className="text-4xl font-bold text-purple-600 dark:text-purple-400">CreLaTech</div>
-              </div>
-
-              <div className="absolute -bottom-6 -right-6 w-1/2 aspect-square bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 flex flex-col justify-center">
-                <p className="text-4xl font-bold text-purple-600 dark:text-purple-400">2020</p>
-                <p className="text-gray-600 dark:text-gray-300">Năm thành lập</p>
+              <div className="aspect-[4/3] bg-gradient-to-br from-[#FF80A9]/20 to-[#6263FF]/20 rounded-lg overflow-hidden flex items-center justify-center">
+                <img
+                  src="/images/Crelatech.png"
+                  alt="CreLaTech Logo"
+                  className="object-contain "
+                />
               </div>
             </motion.div>
           </div>
@@ -197,13 +193,13 @@ export default function About() {
               variants={fadeIn}
               className="order-2 md:order-1"
             >
-              <div className="aspect-[4/3] bg-gradient-to-tr from-purple-500 to-violet-600 rounded-lg overflow-hidden flex flex-col items-center justify-center text-white text-center p-8">
+              <div className="aspect-[4/3] bg-gradient-to-tr from-[#FF80A9] to-[#6263FF] rounded-lg overflow-hidden flex flex-col items-center justify-center text-white text-center p-8">
                 <div className="mb-4">
                   <SparklesIcon className="w-12 h-12 mx-auto" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Tầm nhìn của chúng tôi</h3>
                 <p className="text-white/90">
-                  Trở thành doanh nghiệp công nghệ hàng đầu Việt Nam trong lĩnh vực phát triển các giải pháp quản lý thời gian và năng suất, mang đến những trải nghiệm số hóa đột phá cho người dùng trên toàn thế giới.
+                  Trở thành một nền tảng khởi nguồn sáng tạo uy tín dành cho sinh viên và người trẻ Việt Nam, nơi ý tưởng nhỏ có thể tạo nên thay đổi lớn, và nơi công nghệ không chỉ phục vụ cuộc sống mà còn truyền cảm hứng cho tương lai.
                 </p>
               </div>
             </motion.div>
@@ -215,16 +211,13 @@ export default function About() {
               variants={fadeIn}
               className="order-1 md:order-2"
             >
-              <span className="inline-block py-1 px-3 rounded-full text-sm font-medium bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-300 mb-4">
+              <span className="inline-block py-1 px-3 rounded-full text-sm font-medium bg-[#6263FF]/20 text-[#6263FF]/100 mb-4">
                 Sứ mệnh & Tầm nhìn
               </span>
-              <h2 className="heading-lg mb-6">Định hướng của chúng tôi</h2>
-              <div className="space-y-6 text-gray-600 dark:text-gray-300">
+              <h2 className="heading-lg uppercase mb-6 text-[#0600AB]">Định hướng của chúng tôi</h2>
+              <div className="space-y-6 text-[#0600AB]">
                 <p>
-                  <strong className="text-purple-600 dark:text-purple-400">Sứ mệnh:</strong> Chúng tôi cam kết phát triển các giải pháp công nghệ thông minh, trực quan và dễ sử dụng, giúp người dùng tối ưu hóa thời gian, nâng cao năng suất và cân bằng cuộc sống.
-                </p>
-                <p>
-                  CreLaTech tin rằng công nghệ phải là người bạn đồng hành, hỗ trợ chứ không phải là một trở ngại trong cuộc sống năng động ngày nay. Qua đó, chúng tôi mong muốn tạo ra tác động tích cực đến xã hội thông qua việc giúp mọi người làm việc hiệu quả hơn và dành nhiều thời gian hơn cho những điều quan trọng trong cuộc sống.
+                  <strong className="text-[#6263FF]">Sứ mệnh:</strong> CreLaTech ra đời với sứ mệnh kết nối sự sáng tạo của người trẻ với công nghệ hiện đại, tạo ra những giải pháp mang tính ứng dụng cao, hỗ trợ học tập, làm việc và phát triển cá nhân một cách hiệu quả, thực tế và bền vững.
                 </p>
               </div>
             </motion.div>
@@ -237,7 +230,7 @@ export default function About() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeIn}
-                className="inline-block py-1 px-3 rounded-full text-sm font-medium bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-300 mb-4"
+                className="inline-block py-1 px-3 rounded-full text-sm font-medium bg-[#6263FF]/20 text-[#6263FF]/100 mb-4"
               >
                 Giá trị cốt lõi
               </motion.span>
@@ -246,16 +239,16 @@ export default function About() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeIn}
-                className="heading-lg mb-6"
+                className="heading-lg uppercase mb-6 text-[#0600AB]"
               >
-                Những nguyên tắc định hướng chúng tôi
+                Những nguyên tắc định hướng của chúng tôi
               </motion.h2>
               <motion.p
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeIn}
-                className="text-lg text-gray-600 dark:text-gray-300"
+                className="text-lg text-[#0600AB]"
               >
                 Mọi quyết định và hành động của chúng tôi đều dựa trên những giá trị cốt lõi này.
               </motion.p>
@@ -270,13 +263,13 @@ export default function About() {
                   viewport={{ once: true }}
                   variants={fadeIn}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 hover:border-purple-200 dark:hover:border-purple-800 transition-all"
+                  className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:border-[#6263FF]/20 transition-all"
                 >
-                  <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center text-purple-600 dark:text-purple-300 mb-4">
+                  <div className="w-12 h-12 bg-[#6263FF]/20 rounded-lg flex items-center justify-center text-[#6263FF] mb-4">
                     {value.icon}
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-300">
+                  <h3 className="text-xl font-semibold mb-3 text-[#0600AB]">{value.title}</h3>
+                  <p className="text-[#0600AB]/80">
                     {value.description}
                   </p>
                 </motion.div>
@@ -284,7 +277,7 @@ export default function About() {
             </div>
           </div>
 
-          <section className="py-16 dark:bg-gray-900/50">
+          <section className="py-16">
             <div className="container-custom">
               <div className="text-center max-w-3xl mx-auto mb-16">
                 <motion.span
@@ -292,7 +285,7 @@ export default function About() {
                   whileInView="visible"
                   viewport={{ once: true }}
                   variants={fadeIn}
-                  className="inline-block py-1 px-3 rounded-full text-sm font-medium bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-300 mb-4"
+                  className="inline-block py-1 px-3 rounded-full text-sm font-medium bg-[#6263FF]/20 text-[#6263FF]/100 mb-4"
                 >
                   Đội ngũ sáng lập
                 </motion.span>
@@ -301,22 +294,22 @@ export default function About() {
                   whileInView="visible"
                   viewport={{ once: true }}
                   variants={fadeIn}
-                  className="heading-lg mb-6"
+                  className="heading-lg uppercase mb-6 text-[#0600AB]"
                 >
-                  Gặp gỡ những người đứng sau <span className="text-purple-600 dark:text-purple-400">CreLaTech</span>
+                  Gặp gỡ những người đứng sau <span className="text-[#6263FF]">CreLaTech</span>
                 </motion.h2>
                 <motion.p
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
                   variants={fadeIn}
-                  className="text-lg text-gray-600 dark:text-gray-300"
+                  className="text-lg text-[#0600AB]"
                 >
                   Đội ngũ tài năng và đam mê của chúng tôi là động lực chính đằng sau mọi thành công.
                 </motion.p>
               </div>
 
-              <div className="relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
+              <div className="relative bg-white rounded-2xl shadow-lg overflow-hidden">
                 <div className="flex flex-col md:flex-row">
                   <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
                     <AnimatePresence mode="wait">
@@ -328,12 +321,12 @@ export default function About() {
                         transition={{ duration: 0.5 }}
                         className="h-full flex flex-col justify-center"
                       >
-                        <div className="mb-2 inline-block py-1 px-3 rounded-full text-xs font-medium bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-300">
+                        <div className="mb-2 inline-block py-1 px-3 rounded-full text-xs font-medium bg-[#6263FF]/20 text-[#6263FF] mb-4">
                           #{activeTeamMember + 1} / {teamMembers.length}
                         </div>
-                        <h3 className="text-3xl font-bold mb-2">{teamMembers[activeTeamMember].name}</h3>
-                        <p className="text-purple-600 dark:text-purple-400 font-medium mb-6">{teamMembers[activeTeamMember].role}</p>
-                        <p className="text-gray-600 dark:text-gray-300 mb-8 text-lg">
+                        <h3 className="text-3xl font-bold mb-2 text-[#0600AB]">{teamMembers[activeTeamMember].name}</h3>
+                        <p className="text-[#6263FF] font-medium mb-6">{teamMembers[activeTeamMember].role}</p>
+                        <p className="text-[#0600AB]/80 mb-8 text-lg">
                           {teamMembers[activeTeamMember].bio}
                         </p>
                         <div className="flex space-x-4 mt-auto">
@@ -341,7 +334,7 @@ export default function About() {
                             href={teamMembers[activeTeamMember].social.linkedin}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-gray-100 dark:bg-gray-700 hover:bg-purple-100 dark:hover:bg-purple-900/30 p-2 rounded-full text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-300 transition-colors"
+                            className="bg-gray-100 hover:bg-[#6263FF]/20 p-2 rounded-full text-[#0600AB]/70 hover:text-[#6263FF] transition-colors"
                           >
                             <span className="sr-only">LinkedIn</span>
                             <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -352,7 +345,7 @@ export default function About() {
                             href={teamMembers[activeTeamMember].social.twitter}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-gray-100 dark:bg-gray-700 hover:bg-purple-100 dark:hover:bg-purple-900/30 p-2 rounded-full text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-300 transition-colors"
+                            className="bg-gray-100 hover:bg-[#6263FF]/20 p-2 rounded-full text-[#0600AB]/70 hover:text-[#6263FF] transition-colors"
                           >
                             <span className="sr-only">Twitter</span>
                             <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -364,7 +357,7 @@ export default function About() {
                     </AnimatePresence>
                   </div>
 
-                  <div className="w-full md:w-1/2 relative bg-gradient-to-br from-purple-500 to-violet-600 min-h-[400px] md:min-h-[500px]">
+                  <div className="w-full md:w-1/2 relative bg-gradient-to-br from-[#FF80A9] to-[#6263FF] min-h-[400px] md:min-h-[500px]">
                     <AnimatePresence mode="wait">
                       <motion.div
                         key={activeTeamMember}
@@ -374,12 +367,26 @@ export default function About() {
                         exit={{ opacity: 0, scale: 1.1 }}
                         transition={{ duration: 0.5 }}
                       >
-                        <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white bg-white">
-                          <div className="absolute inset-0 bg-gradient-to-br from-purple-100 to-purple-200 dark:from-purple-900 dark:to-violet-900 flex items-center justify-center">
-                            <span className="text-7xl font-bold text-purple-500 dark:text-purple-300">
-                              {teamMembers[activeTeamMember].name.charAt(0)}
-                            </span>
-                          </div>
+                        <div className="relative w-full h-full md:w-full md:h-full overflow-hidden">
+                          <Image
+                            src={teamMembers[activeTeamMember].image}
+                            alt={teamMembers[activeTeamMember].name}
+                            fill
+                            sizes="(max-width: 768px) 12rem, 16rem"
+                            className="object-cover"
+                            onError={(e) => {
+                              e.currentTarget.style.display = 'none';
+                              const parent = e.currentTarget.parentElement;
+                              if (parent) {
+                                parent.classList.add('bg-white');
+                                parent.innerHTML = `<div class="absolute inset-0 bg-gradient-to-br from-[#FF80A9]/20 to-[#6263FF]/20 flex items-center justify-center">
+                                  <span class="text-7xl font-bold text-[#0600AB]">
+                                    ${teamMembers[activeTeamMember].name.charAt(0)}
+                                  </span>
+                                </div>`;
+                              }
+                            }}
+                          />
                         </div>
                       </motion.div>
                     </AnimatePresence>
@@ -389,17 +396,31 @@ export default function About() {
                         <button
                           key={index}
                           onClick={() => setActiveTeamMember(index)}
-                          className={`w-12 h-12 rounded-full overflow-hidden border-2 transition-all ${
-                            index === activeTeamMember
+                          className={`w-12 h-12 rounded-full overflow-hidden border-2 transition-all relative ${index === activeTeamMember
                               ? 'border-white scale-110'
                               : 'border-white/50 opacity-70 hover:opacity-100'
-                          }`}
+                            }`}
                         >
-                          <div className="w-full h-full bg-gradient-to-br from-purple-100 to-purple-200 dark:from-purple-900 dark:to-violet-900 flex items-center justify-center">
-                            <span className="font-bold text-purple-500 dark:text-purple-300">
-                              {member.name.charAt(0)}
-                            </span>
-                          </div>
+                          <Image
+                            src={member.image}
+                            alt={member.name}
+                            fill
+                            priority
+                            sizes="3rem"
+                            className="object-cover"
+                            onError={(e) => {
+                              // Fallback nếu hình không tải được
+                              e.currentTarget.style.display = 'none';
+                              const parent = e.currentTarget.parentElement;
+                              if (parent) {
+                                parent.innerHTML = `<div class="absolute inset-0 bg-gradient-to-br from-[#FF80A9]/20 to-[#6263FF]/20 flex items-center justify-center">
+      <span class="font-bold text-[#0600AB]">
+        ${member.name.charAt(0)}
+      </span>
+    </div>`;
+                              }
+                            }}
+                          />
                         </button>
                       ))}
                     </div>
@@ -427,11 +448,10 @@ export default function About() {
                       <button
                         key={index}
                         onClick={() => setActiveTeamMember(index)}
-                        className={`w-2 h-2 rounded-full transition-all ${
-                          index === activeTeamMember
-                            ? 'bg-purple-600 w-6'
-                            : 'bg-gray-300 dark:bg-gray-600 hover:bg-purple-400'
-                        }`}
+                        className={`w-2 h-2 rounded-full transition-all ${index === activeTeamMember
+                          ? 'bg-[#6263FF] w-6'
+                          : 'bg-gray-300 hover:bg-[#6263FF]/50'
+                          }`}
                         aria-label={`Go to team member ${index + 1}`}
                       />
                     ))}

@@ -40,16 +40,6 @@ html, body {
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --primary: #a78bfa; /* Purple-400 in dark mode */
-    --primary-light: #c4b5fd; /* Purple-300 in dark mode */
-    --primary-dark: #8b5cf6; /* Purple-500 in dark mode */
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
@@ -62,7 +52,7 @@ body {
   }
   
   .btn-primary {
-    @apply bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-md font-medium transition-all duration-300 shadow-md hover:shadow-lg;
+    @apply bg-[#0600AB]/80 hover:bg-purple-700 text-white px-6 py-2 rounded-md font-medium transition-all duration-300 shadow-md hover:shadow-lg;
   }
   
   .btn-secondary {
@@ -90,7 +80,7 @@ body {
   }
 
   .card {
-    @apply bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-all duration-300;
+    @apply bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300;
   }
   
   .card-hover {
