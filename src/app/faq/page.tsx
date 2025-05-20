@@ -164,11 +164,11 @@ export default function FAQ() {
   return (
     <div className="pt-24 pb-16">
       {/* Hero section */}
-      <section className="py-12 md:py-16 bg-gray-50 dark:bg-gray-900/50 relative">
+      <section className="py-12 md:py-16 bg-gray-50 relative">
         {/* Purple gradient background */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden -z-10">
-          <div className="absolute -top-20 -right-20 w-[40%] h-[40%] rounded-full bg-purple-100 dark:bg-purple-900/20 blur-[80px] opacity-60"></div>
-          <div className="absolute bottom-0 left-0 w-[40%] h-[40%] rounded-full bg-purple-100 dark:bg-purple-900/20 blur-[80px] opacity-60"></div>
+          <div className="absolute -top-20 -right-20 w-[40%] h-[40%] rounded-full bg-purple-100 blur-[80px] opacity-60"></div>
+          <div className="absolute bottom-0 left-0 w-[40%] h-[40%] rounded-full bg-purple-100 blur-[80px] opacity-60"></div>
         </div>
 
         <div className="container-custom">
@@ -195,7 +195,7 @@ export default function FAQ() {
                 placeholder="Tìm kiếm câu hỏi..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-5 py-3 pr-12 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-500 dark:focus:ring-purple-400"
+                className="w-full px-5 py-3 pr-12 rounded-lg border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-purple-500"
               />
               <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400">
                 <MagnifyingGlassIcon className="w-5 h-5" />
@@ -242,7 +242,7 @@ export default function FAQ() {
                     viewport={{ once: true }}
                     variants={fadeIn}
                     transition={{ delay: index * 0.05 }}
-                    className="bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden"
+                    className="bg-white rounded-lg shadow-sm overflow-hidden"
                   >
                     <button 
                       className="flex items-center justify-between w-full px-6 py-4 text-left"
@@ -250,7 +250,7 @@ export default function FAQ() {
                       aria-expanded={openFaqId === faq.id}
                     >
                       <div className="flex items-start">
-                        <QuestionMarkCircleIcon className="w-6 h-6 text-purple-600 dark:text-purple-400 mr-3 flex-shrink-0" />
+                        <QuestionMarkCircleIcon className="w-6 h-6 text-purple-600 mr-3 flex-shrink-0" />
                         <span className="font-medium text-[#0600AB]">{faq.question}</span>
                       </div>
                       {openFaqId === faq.id ? 
@@ -268,7 +268,7 @@ export default function FAQ() {
               </div>
             ) : (
               <div className="text-center py-12">
-                <div className="w-16 h-16 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <QuestionMarkCircleIcon className="w-8 h-8 text-gray-400" />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-[#0600AB]">Không tìm thấy câu hỏi</h3>
@@ -301,35 +301,35 @@ export default function FAQ() {
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 hover:border-purple-200 dark:hover:border-purple-500 transition-all">
-                <div className="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-300 mx-auto mb-4">
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:border-purple-200 transition-all">
+                <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 mx-auto mb-4">
                   <ChatBubbleLeftRightIcon className="w-6 h-6" />
                 </div>
                 <h3 className="font-semibold mb-2">Liên hệ hỗ trợ</h3>
-                <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                <p className="text-gray-600 text-sm mb-4">
                   Đội ngũ hỗ trợ của chúng tôi sẵn sàng giải đáp mọi thắc mắc của bạn.
                 </p>
                 <Link 
                   href="/contact" 
-                  className="text-purple-600 dark:text-purple-400 font-medium hover:underline"
+                  className="text-purple-600 font-medium hover:underline"
                 >
                   Liên hệ ngay →
                 </Link>
               </div>
               
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 hover:border-purple-200 dark:hover:border-purple-500 transition-all">
-                <div className="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-300 mx-auto mb-4">
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:border-purple-200 transition-all">
+                <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 mx-auto mb-4">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
                   </svg>
                 </div>
                 <h3 className="font-semibold mb-2">Xem hướng dẫn sử dụng</h3>
-                <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                <p className="text-gray-600 text-sm mb-4">
                   Tìm hiểu chi tiết về cách sử dụng và tính năng của DO⁺ trong hướng dẫn của chúng tôi.
                 </p>
                 <a 
                   href="#" 
-                  className="text-purple-600 dark:text-purple-400 font-medium hover:underline"
+                  className="text-purple-600 font-medium hover:underline"
                 >
                   Xem hướng dẫn →
                 </a>

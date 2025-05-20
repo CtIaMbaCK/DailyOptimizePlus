@@ -397,8 +397,8 @@ export default function About() {
                           key={index}
                           onClick={() => setActiveTeamMember(index)}
                           className={`w-12 h-12 rounded-full overflow-hidden border-2 transition-all relative ${index === activeTeamMember
-                              ? 'border-white scale-110'
-                              : 'border-white/50 opacity-70 hover:opacity-100'
+                            ? 'border-white scale-110'
+                            : 'border-white/50 opacity-70 hover:opacity-100'
                             }`}
                         >
                           <Image

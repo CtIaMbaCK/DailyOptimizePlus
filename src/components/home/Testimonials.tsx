@@ -27,7 +27,7 @@ const Testimonials = () => {
       text: "Giao diện demo app rất dễ thương, màu sắc tươi sáng, nhưng mình nghĩ DO+ nên có thêm phần tối giản hơn, để phù hợp với người mới hơn 1 tí"
     },
     {
-      name: "Diệu Hoa",
+      name: "Thanh Trúc",
       role: "Sinh viên Công Nghệ",
       image: "/users/user3.jpg",
       rating: 5,

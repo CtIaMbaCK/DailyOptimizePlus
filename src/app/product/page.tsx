@@ -101,7 +101,7 @@ export default function Product() {
     },
     {
       name: 'Premium Working Plan Mini',
-      price: '299.000đ/tháng',
+      price: '129.000đ/tháng',
       description: 'Dành cho người đi làm ở mức thu nhập trung bình',
       features: [
         'Tất cả tính năng Premium',
@@ -111,8 +111,8 @@ export default function Product() {
         'API tích hợp riêng',
         'Đồng bộ không giới hạn thiết bị'
       ],
-      cta: 'Liên hệ tư vấn',
-      popular: false
+      cta: 'Dùng thử 14 ngày',
+      popular: true
     }
   ];
 
